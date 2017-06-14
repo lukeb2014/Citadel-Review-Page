@@ -1,0 +1,58 @@
+<table>
+    <tbody>
+        <tr>
+            <td>
+                <h2>Would you recommend us?</h2>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <img src="/wp-content/uploads/2017/05/thumbs-up-transparent.png" alt="" width="50%" class="alignnone size-full wp-image-1370 thumb-image" id="positive_recommend" srcset="https://www.citadelrs.com/wp-content/uploads/2017/05/thumbs-up-transparent.png 1000w, https://www.citadelrs.com/wp-content/uploads/2017/05/thumbs-up-transparent-150x150.png 150w, https://www.citadelrs.com/wp-content/uploads/2017/05/thumbs-up-transparent-300x300.png 300w, https://www.citadelrs.com/wp-content/uploads/2017/05/thumbs-up-transparent-768x768.png 768w, https://www.citadelrs.com/wp-content/uploads/2017/05/thumbs-up-transparent-600x600.png 600w, https://www.citadelrs.com/wp-content/uploads/2017/05/thumbs-up-transparent-500x500.png 500w" sizes="(max-width: 1000px) 100vw, 1000px">
+            </td>
+            <td>
+                <img src="/wp-content/uploads/2017/05/thumbs-down-transparent.png" alt="" width="50%" class="alignnone size-full wp-image-1371 thumb-image" id="negative_recommend" srcset="https://www.citadelrs.com/wp-content/uploads/2017/05/thumbs-down-transparent.png 1000w, https://www.citadelrs.com/wp-content/uploads/2017/05/thumbs-down-transparent-150x150.png 150w, https://www.citadelrs.com/wp-content/uploads/2017/05/thumbs-down-transparent-300x300.png 300w, https://www.citadelrs.com/wp-content/uploads/2017/05/thumbs-down-transparent-768x768.png 768w, https://www.citadelrs.com/wp-content/uploads/2017/05/thumbs-down-transparent-600x600.png 600w, https://www.citadelrs.com/wp-content/uploads/2017/05/thumbs-down-transparent-500x500.png 500w" sizes="(max-width: 1000px) 100vw, 1000px">
+            </td>
+        </tr>
+    </tbody>
+</table>
+<div id="yes_modal" class="modal">
+    <div class="modal-content">
+        <div class="modal-header modal-header-positive">
+            <span class="close">×</span>
+            <h2>Thank you</h2>
+        </div>
+        <div class="modal-body">
+            <p>Thank you for taking the time to review us!</p>
+            <p>
+                <a href="https://goo.gl/J1oDsN" id="g_review">Review us on Google</a>
+                <br>
+                <a href="https://goo.gl/Fd4pqN" id="y_review">Review us on Yelp</a>
+            </p>
+        </div>
+    </div>
+</div>
+<div id="no_modal" class="modal">
+    <div class="modal-content">
+        <div class="modal-header modal-header-negative">
+            <span class="close">×</span>
+            <h2>Please Leave us some Feedback</h2>
+        </div>
+        <div class="modal-body">
+            <p>We’re sorry that we failed to meet your expectations.</p>
+            <p>Please leave us some feedback to help us serve you better.</p>
+            <form action="https://dentalsocialapp.herokuapp.com/citadel/LeaveReview.php" enctype="multipart/form-data" method="POST" novalidate="true">
+                <!--For now, later this will be pre-filled-->
+                <input id="user" name="name" type="text" hidden="true">
+                <!--this also will be pre-filled with JS code-->
+                <input id="user_phone" name="phone" type="text" hidden="true">
+                <input id="user_email" name="email" type="text" hidden="true">
+                <input id="user_recommended" name="recommended" type="text" hidden="true" value="1">
+                <br>
+                <textarea id="user_comments" cols="25" name="comments" rows="5"></textarea>
+                <p>
+                    <input type="submit" value="Submit" id="submit_button">
+                </p>
+            </form>
+        </div>
+    </div>
+</div>
